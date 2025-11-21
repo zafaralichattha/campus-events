@@ -1,6 +1,11 @@
-# Build stage is not necessary if we build locally with parcel; this Dockerfile just serves /dist
+# Use lightweight Nginx image
 FROM nginx:stable-alpine
+
+# Copy your built Parcel dist files into Nginx html folder
 COPY ./dist /usr/share/nginx/html
-# optional: expose default port 80
+
+# Expose port 80
 EXPOSE 80
+
+# Start Nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]
