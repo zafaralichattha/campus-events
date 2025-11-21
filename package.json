@@ -1,12 +1,11 @@
 {
-  "name": "campus-events",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+"name": "campus-events",
+"version": "1.0.0",
+"scripts": {
+"build": "parcel build src/index.html --dist-dir dist",
+"start": "parcel src/index.html --open"
+},
+"devDependencies": {
+"parcel": "^2.0.0"
+}
 }
